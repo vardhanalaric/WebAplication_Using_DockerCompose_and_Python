@@ -1,0 +1,30 @@
+
+>>This Project is a Python Web Application running on Docker Compose.
+>>This application uses the Flask Framework and maintains a hit counter in redis.
+>> Requirements:
+		Docker Engine
+		Docker Compose
+		Docker Images -> provide Redis / Python , flask.
+
+
+>> Applicaton code for the project is @app.py.
+>>DockerImage which contains all dependencies this python application requires @DockerFile.
+>>Defining Services @docker-compose.yml.
+
+>>Process of running Application:
+	
+	-> Start the docker-compose by using docker-compose up
+			This will pulls a redis image , builds an image for code and starts the services we define.
+	-> Enter host / local ip / webservices ip for access in a browser to see the aplication is running or not.
+	-> Every time you refresh it will increase the count we refresh and show the text like "Hello World ! You have been seen 2 times."
+->This is the basic objective of this appication but i edit the code @docker-compose.yml to add extra feature by adding following things :
+		->volumes:
+			- .:/code
+		->environment:
+			FLASK_ENV: development
+->This will add BindMount Feature to the python application using this docker.
+ 		By this we can update the greeting along with the increment count @everytime we refresh.           :)
+		       												   :)
+		       												   :)
+
+                     
